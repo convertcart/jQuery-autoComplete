@@ -81,6 +81,7 @@
             });
 
             that.on('blur.autocomplete', function(){
+                var over_sb;
                 try { over_sb = $('.autocomplete-suggestions:hover').length; } catch(e){ over_sb = 0; } // IE7 fix :hover
                 if (!over_sb) {
                     that.last_val = that.val();
